@@ -7,7 +7,6 @@ public class WASD : MonoBehaviour {
 	int monedas;
 	Rigidbody rb;
 	public Text puntos;
-	public GameObject salida1;
 	public float velocidad;
 	public Text win;
 
@@ -17,12 +16,7 @@ public class WASD : MonoBehaviour {
 		sumaMoneda ();
 		if (monedas >= 11) {
 			win.gameObject.SetActive (true);
-			salida1 = new GameObject("Salida 1");
-			Destroy (salida1);
-
-
 		}
-
 	}
 	private void sumaMoneda(){
 		puntos.text = "Monedas: "+ monedas + "/11";
